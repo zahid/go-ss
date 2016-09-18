@@ -1,3 +1,6 @@
+// Use this
+// phantomjs rasterize.js https://google.com out/1.png entire page
+
 "use strict";
 var page = require('webpage').create(),
     system = require('system'),
