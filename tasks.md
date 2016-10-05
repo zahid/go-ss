@@ -4,7 +4,7 @@ Finish these. Then add it to the changelog.
     - [x] Can plug in different instances of screenshot takers
 - [x] Simplify rasterize.js phantomjs program
 - [x] Take a screenshot
-- [ ] Make an HTTP API for taking screenshots
+- [x] Make an HTTP API for taking screenshots
 - [ ] Unit tests
 - [ ] Integration tests
 - [ ] Test the performance
