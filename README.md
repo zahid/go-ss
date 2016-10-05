@@ -15,4 +15,9 @@ This is the webpage capture service
     ```
 
 **Help**
+
 Here's a link to a [postman collection](https://www.getpostman.com/collections/acb7ebc9af8a292cc70f)
+
+**Requirements**
+
+go version go1.6 darwin/amd64
