@@ -2,6 +2,7 @@ package lib
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -27,7 +28,7 @@ func (*PhantomCapture) Capture(url string, c chan string) {
 http://www.darrencoxall.com/golang/executing-commands-in-go/
 */
 func printCommand(cmd *exec.Cmd) {
-	fmt.Printf("==> Executing: %s\n", strings.Join(cmd.Args, " "))
+	log.Printf("Executing: %s\n", strings.Join(cmd.Args, " "))
 }
 
 func printError(err error) {
@@ -38,6 +39,6 @@ func printError(err error) {
 
 func printOutput(outs []byte) {
 	if len(outs) > 0 {
-		fmt.Printf("==> Output: %s\n", string(outs))
+		log.Printf("==> Output: %s\n", string(outs))
 	}
 }
