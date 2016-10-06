@@ -3,25 +3,22 @@ package main
 import (
 	"./lib"
 	"fmt"
+	"log"
 	"net/http"
 )
 
-// func main() {
-// 	phantomjs := lib.PhantomCapture{}
-// 	c := make(chan string)
-// 	go phantomjs.Capture("https://yahoo.com", c)
-// 	fmt.Printf("Got: %s\n", <-c)
-// }
-
 func main() {
+	log.Print("capturer online")
 	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		log.Fatal("ListenAndServe:", err)
+	}
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	phantomjs := lib.PhantomCapture{}
 	c := make(chan string)
-	go phantomjs.Capture("https://yahoo.com", c)
-
+	go phantomjs.Capture(r.URL.Path[1:], c)
 	fmt.Fprintf(w, "<img src=\"data:image/png;base64,%s\">", <-c)
 }
