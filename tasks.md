@@ -1,12 +1,20 @@
 **Not done**
+
 - [ ] validate incoming requests
     - [ ] Accepts only a GET request and send an HTTP 422 if not
     - [ ] Checks that URL is ??valid?? and send an HTTP 422 if not
     - [ ] Check for exit codes and send an HTTO 5xx if not exit code 0
     - [ ] Return 201 if it worked
+
 - [ ] Unit tests
 - [ ] Integration tests
+
+- [ ] Configure "profiles" (and let them be choosable via the api)
+    Make some combinations of browser/device/viewport combinations to offer
+
 - [ ] Test the performance
+
+
 
 **Done**
 
