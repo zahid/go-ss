@@ -20,5 +20,5 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	phantomjs := lib.PhantomCapture{}
 	c := make(chan string)
 	go phantomjs.Capture(r.URL.Path[1:], c)
-	fmt.Fprintf(w, "<img src=\"data:image/png;base64,%s\">", <-c)
+	fmt.Fprintf(w, "%s", <-c)
 }
