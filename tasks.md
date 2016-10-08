@@ -12,7 +12,10 @@
 - [ ] Configure "profiles" (and let them be choosable via the api)
     Make some combinations of browser/device/viewport combinations to offer
 
-- [ ] Test the performance
+- [ ] Benchmark
+    - [ ] How long for 1 capture?
+        - what is the device, browser, os, viewport etc?
+    - [ ] How many captures can we handle at once?
 
 
 
